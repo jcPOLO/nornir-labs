@@ -1,0 +1,6 @@
+---
+ios:
+  platform: ios
+  connection_options:
+    netmiko:
+      extras:  {}

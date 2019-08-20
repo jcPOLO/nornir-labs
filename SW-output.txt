@@ -1,0 +1,41 @@
+
+CORE-SWITCH#
+CORE-SWITCH#terminal length 0
+CORE-SWITCH#terminal width 511
+CORE-SWITCH#
+CORE-SWITCH#show interfaces status
+
+Port      Name               Status       Vlan       Duplex  Speed Type 
+Et0/0     Trunk              connected    trunk        auto   auto unknown
+Et0/1                        connected    trunk        auto   auto unknown
+Et0/2                        connected    trunk        auto   auto unknown
+Et0/3                        connected    trunk        auto   auto unknown
+CORE-SWITCH#
+CORE-SWITCH#
+CORE-SWITCH#config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+CORE-SWITCH(config)#
+CORE-SWITCH(config)#vlan 1098
+CORE-SWITCH(config-vlan)# name ANCHOAS
+CORE-SWITCH(config-vlan)#!
+CORE-SWITCH(config-vlan)#interface Et0/0
+CORE-SWITCH(config-if)# description Nornir 5.0
+CORE-SWITCH(config-if)# switchport trunk allowed vlan 1099
+CORE-SWITCH(config-if)# switchport trunk allowed vlan add 1098
+CORE-SWITCH(config-if)#interface Et0/1
+CORE-SWITCH(config-if)# description Nornir 5.0
+CORE-SWITCH(config-if)# switchport trunk allowed vlan 1099
+CORE-SWITCH(config-if)# switchport trunk allowed vlan add 1098
+CORE-SWITCH(config-if)#interface Et0/2
+CORE-SWITCH(config-if)# description Nornir 5.0
+CORE-SWITCH(config-if)# switchport trunk allowed vlan 1099
+CORE-SWITCH(config-if)# switchport trunk allowed vlan add 1098
+CORE-SWITCH(config-if)#interface Et0/3
+CORE-SWITCH(config-if)# description Nornir 5.0
+CORE-SWITCH(config-if)# switchport trunk allowed vlan 1099
+CORE-SWITCH(config-if)# switchport trunk allowed vlan add 1098
+CORE-SWITCH(config-if)#!
+CORE-SWITCH(config-if)#
+CORE-SWITCH(config-if)#end
+CORE-SWITCH#
+CORE-SWITCH#

@@ -1,0 +1,29 @@
+
+SW51#
+SW51#terminal length 0
+SW51#terminal width 511
+SW51#
+SW51#show interfaces status
+
+Port      Name               Status       Vlan       Duplex  Speed Type 
+Et0/0     Trunk              connected    trunk        auto   auto unknown
+Et0/1                        connected    1            auto   auto unknown
+Et0/2                        connected    1            auto   auto unknown
+Et0/3                        connected    1            auto   auto unknown
+SW51#
+SW51#
+SW51#config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+SW51(config)#
+SW51(config)#vlan 1098
+SW51(config-vlan)# name ANCHOAS
+SW51(config-vlan)#!
+SW51(config-vlan)#interface Et0/0
+SW51(config-if)# description Nornir 5.0
+SW51(config-if)# switchport trunk allowed vlan 1099
+SW51(config-if)# switchport trunk allowed vlan add 1098
+SW51(config-if)#!
+SW51(config-if)#
+SW51(config-if)#end
+SW51#
+SW51#

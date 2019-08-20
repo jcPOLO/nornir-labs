@@ -1,0 +1,56 @@
+---
+SW51:
+  hostname: 192.168.65.135
+  username: cisco
+  password: cisco
+  port: 65001
+  groups:
+    - ios
+  data:
+    site: lan
+    role: access
+    type: network_device
+
+SW52:
+  hostname: 192.168.65.135
+  username: cisco
+  password: cisco
+  port: 65102
+  groups:
+    - ios
+#  connection_options:
+#    netmiko:
+#      extras:
+#        device_type: 'cisco_ios_telnet'
+#    napalm:
+#      extras:
+#        optional_args:
+#          transport: 'telnet'
+  data:
+    site: lan
+    role: anchoa
+    type: network_device
+
+SW53:
+  hostname: 192.168.65.135
+  username: cisco
+  password: cisco
+  port: 65003
+  groups:
+    - ios
+  data:
+    site: lan
+    role: access
+    type: network_device
+
+SW:
+  hostname: 192.168.65.135
+  username: cisco
+  password: cisco
+  port: 65000
+  groups:
+    - ios
+  data:
+    site: lan
+    role: core
+    type: network_device

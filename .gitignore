@@ -1,0 +1,6 @@
+venv/
+ntc-templates/
+nornir.log
+Pipfile.lock
+.idea/
+__pycache__

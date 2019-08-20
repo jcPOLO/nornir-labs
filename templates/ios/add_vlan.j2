@@ -1,0 +1,10 @@
+vlan 1098
+ name ANCHOAS
+!
+{% for interface in port %}
+interface {{ interface }}
+ description Nornir 5.0
+ switchport trunk allowed vlan 1099
+ switchport trunk allowed vlan add 1098
+{% endfor %}
+!
